@@ -1,0 +1,17 @@
+{
+  "name": "com.neurotech.callibriecg",
+  "version": "1.0.0",
+  "displayName": "callibriECG",
+  "description": "The main functionality is the calculation of cardio-interval lengths, heart rate and Stress Index (SI)",
+  "dependencies": {},
+ "keywords": [
+    "heart rate",
+    "ecg",
+    "neurotech"
+  ],
+  "author": {
+    "name": "Btainit LLC",
+    "email": "support@brainbit.com",
+    "url": "https://www.unity3d.com"
+  }
+}
