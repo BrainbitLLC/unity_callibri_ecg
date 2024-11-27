@@ -1,6 +1,6 @@
 {
   "name": "com.neurotech.callibriecg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "callibriECG",
   "description": "The main functionality is the calculation of cardio-interval lengths, heart rate and Stress Index (SI)",
   "dependencies": {},
@@ -12,6 +12,6 @@
   "author": {
     "name": "BrainBit LLC",
     "email": "support@brainbit.com",
-    "url": "https://www.unity3d.com"
+    "url": "https://gitlab.com/neurosdk2/neurosamples"
   }
 }

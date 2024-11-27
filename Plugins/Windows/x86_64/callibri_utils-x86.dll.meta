@@ -23,12 +23,14 @@ PluginImporter:
         Exclude WebGL: 0
         Exclude Win: 0
         Exclude Win64: 1
+        Exclude WindowsStoreApps: 0
         Exclude iOS: 0
   - first:
       Android: Android
     second:
       enabled: 1
       settings:
+        AndroidSharedLibraryType: Executable
         CPU: ARMv7
   - first:
       Any: 
@@ -72,6 +74,16 @@ PluginImporter:
     second:
       enabled: 1
       settings: {}
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
+      enabled: 1
+      settings:
+        CPU: X86
+        DontProcess: false
+        PlaceholderPath: 
+        SDK: AnySDK
+        ScriptingBackend: AnyScriptingBackend
   - first:
       iPhone: iOS
     second:

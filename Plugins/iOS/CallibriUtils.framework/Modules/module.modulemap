@@ -1,0 +1,6 @@
+framework module CallibriUtils {
+  umbrella header "NTCallibriMathExport.h"
+
+  export *
+  module * { export * }
+}
