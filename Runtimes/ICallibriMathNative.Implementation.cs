@@ -1320,119 +1320,119 @@ namespace Neurotech.CallibriUtils
     public class OSXImpl : ICallibriMathNative
     {
         
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "createCallibriMathLib")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "createCallibriMathLib")]
         private static extern IntPtr n_createCallibriMathLib(int sampling_rate, int data_window, int nwins_for_pressure_index);
         public IntPtr createCallibriMathLib(int sampling_rate, int data_window, int nwins_for_pressure_index)
         { 
            return OSXImpl.n_createCallibriMathLib( sampling_rate, data_window, nwins_for_pressure_index); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "freeCallibriMathLib")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "freeCallibriMathLib")]
         private static extern void n_freeCallibriMathLib(IntPtr mathPtr);
         public void freeCallibriMathLib(IntPtr mathPtr)
         { 
             OSXImpl.n_freeCallibriMathLib( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibInitFilter")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibInitFilter")]
         private static extern void n_CallibriMathLibInitFilter(IntPtr mathPtr);
         public void CallibriMathLibInitFilter(IntPtr mathPtr)
         { 
             OSXImpl.n_CallibriMathLibInitFilter( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibPushData")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibPushData")]
         private static extern void n_CallibriMathLibPushData(IntPtr mathPtr, [In,Out] double[] samples, int samplesCount);
         public void CallibriMathLibPushData(IntPtr mathPtr, [In,Out] double[] samples, int samplesCount)
         { 
             OSXImpl.n_CallibriMathLibPushData( mathPtr, samples, samplesCount); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibProcessDataArr")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibProcessDataArr")]
         private static extern void n_CallibriMathLibProcessDataArr(IntPtr mathPtr);
         public void CallibriMathLibProcessDataArr(IntPtr mathPtr)
         { 
             OSXImpl.n_CallibriMathLibProcessDataArr( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetRR")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetRR")]
         private static extern double n_CallibriMathLibGetRR(IntPtr mathPtr);
         public double CallibriMathLibGetRR(IntPtr mathPtr)
         { 
            return OSXImpl.n_CallibriMathLibGetRR( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetPressureIndex")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetPressureIndex")]
         private static extern double n_CallibriMathLibGetPressureIndex(IntPtr mathPtr);
         public double CallibriMathLibGetPressureIndex(IntPtr mathPtr)
         { 
            return OSXImpl.n_CallibriMathLibGetPressureIndex( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetHR")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetHR")]
         private static extern double n_CallibriMathLibGetHR(IntPtr mathPtr);
         public double CallibriMathLibGetHR(IntPtr mathPtr)
         { 
            return OSXImpl.n_CallibriMathLibGetHR( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetModa")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetModa")]
         private static extern double n_CallibriMathLibGetModa(IntPtr mathPtr);
         public double CallibriMathLibGetModa(IntPtr mathPtr)
         { 
            return OSXImpl.n_CallibriMathLibGetModa( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetAmplModa")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetAmplModa")]
         private static extern double n_CallibriMathLibGetAmplModa(IntPtr mathPtr);
         public double CallibriMathLibGetAmplModa(IntPtr mathPtr)
         { 
            return OSXImpl.n_CallibriMathLibGetAmplModa( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetVariationDist")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibGetVariationDist")]
         private static extern double n_CallibriMathLibGetVariationDist(IntPtr mathPtr);
         public double CallibriMathLibGetVariationDist(IntPtr mathPtr)
         { 
            return OSXImpl.n_CallibriMathLibGetVariationDist( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibInitialSignalCorrupted")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibInitialSignalCorrupted")]
         private static extern bool n_CallibriMathLibInitialSignalCorrupted(IntPtr mathPtr);
         public bool CallibriMathLibInitialSignalCorrupted(IntPtr mathPtr)
         { 
            return OSXImpl.n_CallibriMathLibInitialSignalCorrupted( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibResetDataProcess")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibResetDataProcess")]
         private static extern void n_CallibriMathLibResetDataProcess(IntPtr mathPtr);
         public void CallibriMathLibResetDataProcess(IntPtr mathPtr)
         { 
             OSXImpl.n_CallibriMathLibResetDataProcess( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibSetRRchecked")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibSetRRchecked")]
         private static extern void n_CallibriMathLibSetRRchecked(IntPtr mathPtr);
         public void CallibriMathLibSetRRchecked(IntPtr mathPtr)
         { 
             OSXImpl.n_CallibriMathLibSetRRchecked( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibSetPressureAverage")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibSetPressureAverage")]
         private static extern void n_CallibriMathLibSetPressureAverage(IntPtr mathPtr, int t);
         public void CallibriMathLibSetPressureAverage(IntPtr mathPtr, int t)
         { 
             OSXImpl.n_CallibriMathLibSetPressureAverage( mathPtr, t); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibRRdetected")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibRRdetected")]
         private static extern bool n_CallibriMathLibRRdetected(IntPtr mathPtr);
         public bool CallibriMathLibRRdetected(IntPtr mathPtr)
         { 
            return OSXImpl.n_CallibriMathLibRRdetected( mathPtr); 
         }
 
-        [DllImport(CallibriUtilsLibNamePropvider.LibName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibClearData")]
+        [DllImport(CallibriUtilsLibNamePropvider.LibNameiOS, CallingConvention = CallingConvention.Cdecl, EntryPoint = "CallibriMathLibClearData")]
         private static extern void n_CallibriMathLibClearData(IntPtr mathPtr);
         public void CallibriMathLibClearData(IntPtr mathPtr)
         { 
